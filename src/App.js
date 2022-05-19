@@ -1,22 +1,27 @@
+import { useState, useEffect } from "react";
 import Home from "./container/Home/Home";
-import Nav from "./container/Nav/Nav";
+import NavBar from "./container/NavBar/Nav";
 import ProductPage from "./container/ProductPage/ProductPage";
+import { getALlpacks } from "./services/db";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
+  const [packs, setPacks] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      setPacks(await getALlpacks());
+    })();
+  }, []);
+
   return (
-    <div>
-      <Nav />
-      <ul>
-        <Home />
-        <ProductPage />
-        <li>Grid of products/product page</li>
-        <li>featured products carousel component. </li>
-        <li>
-          cart system. get qty from firestore and check if qty avaliable is
-          greater than qty in cart
-        </li>
-      </ul>
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/products" element={<ProductPage packs={packs} />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

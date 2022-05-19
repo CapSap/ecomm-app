@@ -1,10 +1,10 @@
 - 2 pages:
 
   - Home Page
-  - Grid of products
+    - Grid of products
+    - Carousel of featured products
+  - Product Page (with id parameter) - similar to a product page on another site, allows you to add to cart and select product variants
 
-- Carousel of featured products
-- Product Page (with id parameter) - similar to a product page on another site, allows you to add to cart and select product variants
 - All products should be stored in Firestore, you should store the following information:
   - quantity
   - variants (could be colors, sizes, etc)
@@ -19,3 +19,4 @@
     - ability to change quantity of products in cart
     - ability to remove items from cart
     - Make sure your site is scoped to one category of products.
+  - maybe have a detailed product page

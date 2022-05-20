@@ -1,10 +1,31 @@
+import { Link, useParams } from "react-router-dom";
+import styles from "./ProductPage.module.scss";
+
 const ProductPage = ({ packs }) => {
+  const params = useParams();
+  console.log(params.id);
+
   console.log(packs);
 
+  const pack = Object.assign(
+    {},
+    ...packs.filter((pack) => pack.id === params.id)
+  );
+
+  console.log(pack);
+
   return (
-    <div>
-      detailed info about a single product/ pack that we get the id from url{" "}
-    </div>
+    <>
+      <div className={styles.container}>
+        <h2>
+          {pack.brand} {pack.packName}
+        </h2>
+        <div>
+          <img src={pack.imgUrl} alt={pack.packName} />
+          <p>{pack.description}</p>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -1,10 +1,8 @@
 const Pack = ({ pack }) => {
   return (
     <div>
-      <img alt={pack.name} />
-      <p>Name: {pack.name}</p>
+      <img src={pack.imgUrl} alt={pack.name} />
+      <p>Name: {pack.packName}</p>
     </div>
   );
 };
-
-export default Pack;

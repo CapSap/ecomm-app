@@ -2,8 +2,22 @@
 }
 
 .landing {
-  height: 40vh;
+  height: 60vh;
   background-color: rgb(104, 161, 211);
+  background-image: url("https://images.unsplash.com/photo-1616413551220-c89ad7c348c7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740");
+  background-size: cover;
+  background-position: 90%;
+  background-blend-mode: multiply;
+  text-align: center;
+  font-family: "Space Mono", monospace;
+
+  &_heading {
+    padding: 2.5em 0;
+    margin: auto;
+    color: white;
+    font-size: clamp(3rem, 5vw + 1rem, 6rem);
+    font-weight: bold;
+  }
 }
 
 .productGrid {

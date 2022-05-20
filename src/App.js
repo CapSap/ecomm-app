@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Home from "./container/Home/Home";
-import NavBar from "./container/NavBar/Nav";
 import ProductPage from "./container/ProductPage/ProductPage";
 import { getALlpacks } from "./services/db";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,10 +16,9 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <NavBar />
       <Routes>
         <Route path="/" element={<Home packs={packs} />} />
-        <Route path="/products" element={<ProductPage packs={packs} />} />
+        <Route path="/products/:id" element={<ProductPage packs={packs} />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>

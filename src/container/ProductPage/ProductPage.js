@@ -1,18 +1,41 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styles from "./ProductPage.module.scss";
 
 const ProductPage = ({ packs }) => {
+  const [packSpec, setPackSpec] = useState("");
+
+  // grab the params from url and filter out all other packs
   const params = useParams();
-  console.log(params.id);
-
-  console.log(packs);
-
   const pack = Object.assign(
     {},
     ...packs.filter((pack) => pack.id === params.id)
   );
 
-  console.log(pack);
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(e.target[0].value);
+    setPackSpec({
+      ...pack,
+      colour: e.target[0].value,
+    });
+  };
+  // render a select if there are multiple options or just the one
+  function renderArrayOrSingle(variants) {
+    if (Array.isArray(variants)) {
+      return (
+        <select>
+          {variants.map((col) => (
+            <option key={col} value={col}>
+              {col}
+            </option>
+          ))}{" "}
+        </select>
+      );
+    } else {
+      <p>{variants}</p>;
+    }
+  }
 
   return (
     <>
@@ -22,6 +45,17 @@ const ProductPage = ({ packs }) => {
         </h2>
         <div>
           <img src={pack.imgUrl} alt={pack.packName} />
+          <form onSubmit={handleClick}>
+            <ul>
+              <li>
+                Price: {pack.price}
+                {pack.priceCurrency}
+              </li>
+
+              <li>Colour: {renderArrayOrSingle(pack.colour)}</li>
+            </ul>
+            <button>Add to Cart</button>
+          </form>
           <p>{pack.description}</p>
         </div>
       </div>

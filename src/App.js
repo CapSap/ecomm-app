@@ -4,6 +4,7 @@ import NavBar from "./container/NavBar/Nav";
 import ProductPage from "./container/ProductPage/ProductPage";
 import { getALlpacks } from "./services/db";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Admin from "./container/Admin/Admin";
 
 const App = () => {
   const [packs, setPacks] = useState([]);
@@ -18,8 +19,9 @@ const App = () => {
     <BrowserRouter>
       <NavBar />
       <Routes>
+        <Route path="/" element={<Home packs={packs} />} />
         <Route path="/products" element={<ProductPage packs={packs} />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );

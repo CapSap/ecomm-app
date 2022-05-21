@@ -21,11 +21,11 @@ const ProductPage = ({ packs }) => {
     });
   };
   // render a select if there are multiple options or just the one
-  function renderArrayOrSingle(variants) {
-    if (Array.isArray(variants)) {
+  function renderArrayOrSingle(packAttribute) {
+    if (Array.isArray(packAttribute)) {
       return (
         <select>
-          {variants.map((col) => (
+          {packAttribute.map((col) => (
             <option key={col} value={col}>
               {col}
             </option>
@@ -33,7 +33,7 @@ const ProductPage = ({ packs }) => {
         </select>
       );
     } else {
-      <p>{variants}</p>;
+      return packAttribute;
     }
   }
 
@@ -48,11 +48,11 @@ const ProductPage = ({ packs }) => {
           <form onSubmit={handleClick}>
             <ul>
               <li>
-                Price: {pack.price}
-                {pack.priceCurrency}
+                Price: {pack.price} {pack.priceCurrency}
               </li>
 
               <li>Colour: {renderArrayOrSingle(pack.colour)}</li>
+              <li>Size: {pack.size}</li>
             </ul>
             <button>Add to Cart</button>
           </form>

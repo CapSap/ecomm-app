@@ -3,14 +3,16 @@ import styles from "./PacksGrid.module.scss";
 
 const Pack = ({ pack }) => {
   return (
-    <Link to={`/products/${pack.id}`}>
+    <Link to={`/products/${pack.id}`} className={styles.link}>
       <div className={styles.pack}>
         <img src={pack.imgUrl} alt={pack.name} />
-        <p>Brand: {pack.brand}</p>
-        <p>Name: {pack.packName}</p>
         <p>
-          Price: {pack.price}
-          {pack.priceCurrency}
+          {" "}
+          {pack.brand} {pack.packName}
+        </p>
+        <p className={styles.secondary}>Size: {pack.size}</p>
+        <p className={styles.secondary}>
+          Price: {pack.price} {pack.priceCurrency}
         </p>
       </div>
     </Link>

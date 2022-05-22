@@ -1,0 +1,22 @@
+@use "../../scss/pallete";
+@use "../../scss/font";
+
+.nav {
+  display: flex;
+  background-color: pallete.$main;
+}
+
+.navItem {
+  list-style-type: none;
+  font-size: 2em;
+  text-decoration: none;
+  color: pallete.$dark-shade;
+
+  &_link {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    color: pallete.$dark-shade;
+    font-family: font.$sub-title;
+  }
+}

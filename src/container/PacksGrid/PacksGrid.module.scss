@@ -1,0 +1,42 @@
+@use "../../scss/pallete";
+@use "../../scss/font";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: pallete.$dark-shade;
+  padding: 2em;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.pack {
+  font-family: font.$para;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  background-color: pallete.$light;
+  border-radius: 6px;
+  & img {
+    height: 315px;
+    border-radius: 6px;
+  }
+  & p {
+    text-decoration: none;
+  }
+
+  &:hover {
+    transition-duration: 1s;
+
+    transform: scale(1.08);
+  }
+}
+
+.secondary {
+  color: pallete.$dark-accent;
+}

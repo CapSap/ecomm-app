@@ -11,3 +11,7 @@ export const getALlpacks = async () => {
 
   return cleaned;
 };
+
+export const createPack = async (info) => {
+  await firestore.collection("packs").add(info);
+};

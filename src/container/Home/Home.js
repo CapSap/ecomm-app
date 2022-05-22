@@ -1,15 +1,17 @@
-import { getALlpacks } from "../../services/db";
+import Carosel from "../../components/Carosel/Carosel";
+import PacksGrid from "../PacksGrid/PacksGrid";
 import styles from "./Home.module.scss";
 
-const Home = () => {
-  getALlpacks();
+const Home = ({ packs }) => {
+  console.log(packs);
   return (
     <div className={styles.home}>
       <div className={styles.landing}>
-        landing section/carosel of some featured products
+        <h1 className={styles.landing_heading}>Pack Shop Online</h1>
       </div>
-
-      <div>grid of products.</div>
+      <h2 className={styles.heading}>Featured Products</h2>
+      <Carosel packs={packs} />
+      <PacksGrid packs={packs} />
     </div>
   );
 };

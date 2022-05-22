@@ -1,59 +1,54 @@
 @use "../../scss/pallete";
-@use "../../scss/font";
 
 .container {
+  // position: relative;
+  height: 60vh;
+
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 2em;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  font-family: font.$para;
 }
 
-.imgMain {
-  max-width: 100%;
-}
-
-.form {
-  font-size: 1em;
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: pallete.$light;
-  border: 2px solid pallete.$dark-shade;
-  padding: 5% 10%;
-  margin-bottom: 10%;
+  height: 60vh;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 1s ease;
+
+  &_active {
+    @extend .card;
+    visibility: visible;
+
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }
+
+  & img {
+    max-height: 80%;
+    object-fit: contain;
+  }
 }
 
-.secondary {
-  color: pallete.$dark-accent;
+.leftArrow {
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
-
-.list {
-  & li {
-    text-align: center;
-    text-justify: inter-word;
-  }
-  & select {
-    font-size: 0.8em;
-    border-radius: 9px;
-
-    color: pallete.$light;
-
-    background-color: pallete.$light-accent;
-
-    &:hover {
-      border-top-color: pallete.$dark-shade;
-      background: pallete.$dark-accent;
-      color: #ccc;
-    }
-  }
+.rightArrow {
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .btn {
-  font-size: 1em;
-  font-weight: bold;
   text-align: center;
   border-top: 1px solid pallete.$light-accent;
   background: pallete.$main;
@@ -81,6 +76,7 @@
   box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: pallete.$light;
+  font-size: 24px;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -92,21 +88,4 @@
 .btn:active {
   border-top-color: pallete.$dark-shade;
   background: pallete.$dark-accent;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: pallete.$light-accent;
-}
-
-p {
-  max-width: 80%;
-  line-height: 1.6;
-}
-
-h2,
-h3 {
-  font-family: font.$sub-title;
 }

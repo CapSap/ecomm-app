@@ -1,3 +1,5 @@
+@use "../../scss/pallete";
+
 .container {
   // position: relative;
   height: 60vh;
@@ -48,19 +50,23 @@
 
 .btn {
   text-align: center;
-  border-top: 1px solid #96d1f8;
-  background: #65a9d7;
+  border-top: 1px solid pallete.$light-accent;
+  background: pallete.$main;
   background: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(#3e779d),
-    to(#65a9d7)
+    from(pallete.$main),
+    to(pallete.$light-accent)
   );
-  background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-  background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-  background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-  background: -o-linear-gradient(top, #3e779d, #65a9d7);
+  background: -webkit-linear-gradient(
+    top,
+    pallete.$main,
+    pallete.$light-accent
+  );
+  background: -moz-linear-gradient(top, pallete.$main, pallete.$light-accent);
+  background: -ms-linear-gradient(top, pallete.$main, pallete.$light-accent);
+  background: -o-linear-gradient(top, pallete.$main, pallete.$light-accent);
   padding: 9.5px 19px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
@@ -69,17 +75,17 @@
   -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
   box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
-  color: white;
+  color: pallete.$light;
   font-size: 24px;
   text-decoration: none;
   vertical-align: middle;
 }
 .btn:hover {
-  border-top-color: #28597a;
-  background: #28597a;
+  border-top-color: pallete.$dark-shade;
+  background: pallete.$dark-accent;
   color: #ccc;
 }
 .btn:active {
-  border-top-color: #1b435e;
-  background: #1b435e;
+  border-top-color: pallete.$dark-shade;
+  background: pallete.$dark-accent;
 }

@@ -1,3 +1,5 @@
+@use "../../scss/font";
+
 .landing {
   height: 60vh;
   background-color: rgb(104, 161, 211);
@@ -6,8 +8,7 @@
   background-position: 90%;
   background-blend-mode: multiply;
   text-align: center;
-  font-family: "Space Mono", monospace;
-
+  font-family: font.$heading;
   &_heading {
     padding: 2.5em 0;
     margin: auto;
@@ -22,7 +23,7 @@
 }
 
 .heading {
-  font-family: "Space Mono", monospace;
+  font-family: font.$heading;
   font-size: clamp(2rem, 5vw + 1rem, 3rem);
   text-align: center;
 }

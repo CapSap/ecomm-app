@@ -44,7 +44,7 @@ const ProductPage = ({ packs }) => {
           {pack.brand} {pack.packName}
         </h2>
 
-        <img src={pack.imgUrl} alt={pack.packName} />
+        <img src={pack.imgUrl} alt={pack.packName} className={styles.imgMain} />
         <form onSubmit={handleClick} className={styles.form}>
           <h3 className={styles.h3}>Features</h3>
           <ul className={styles.list}>
@@ -66,8 +66,10 @@ const ProductPage = ({ packs }) => {
           </ul>
           <button className={styles.btn}>Add to Cart</button>
         </form>
-        <h3 className={styles.h3}>More Details</h3>
-        <p>{pack.description}</p>
+        <div className={styles.description}>
+          <h3 className={styles.h3}>More Details</h3>
+          <p>{pack.description}</p>
+        </div>
       </div>
     </>
   );

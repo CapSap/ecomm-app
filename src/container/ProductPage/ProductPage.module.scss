@@ -9,30 +9,48 @@
   align-items: center;
 }
 
+.imgMain {
+  max-width: 100%;
+}
+
 .form {
+  font-size: 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: pallete.$light;
+  border: 2px solid pallete.$dark-shade;
+  padding: 5% 10%;
 }
 
 .secondary {
-  color: pallete.$main;
+  color: pallete.$dark-accent;
 }
 
 .list {
-  width: 500px;
-  border: 1px solid blanchedalmond;
   & li {
     text-align: center;
     text-justify: inter-word;
   }
   & select {
-    font-size: 1em;
+    font-size: 0.8em;
+    border-radius: 9px;
+
+    color: pallete.$light;
+
+    background-color: pallete.$light-accent;
+
+    &:hover {
+      border-top-color: pallete.$dark-shade;
+      background: pallete.$dark-accent;
+      color: #ccc;
+    }
   }
 }
 
 .btn {
+  font-size: 1em;
+  font-weight: bold;
   text-align: center;
   border-top: 1px solid pallete.$light-accent;
   background: pallete.$main;
@@ -60,7 +78,6 @@
   box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: pallete.$light;
-  font-size: 24px;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -72,6 +89,13 @@
 .btn:active {
   border-top-color: pallete.$dark-shade;
   background: pallete.$dark-accent;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: pallete.$light-accent;
 }
 
 p {

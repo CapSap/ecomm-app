@@ -9,6 +9,7 @@ const Home = ({ packs }) => {
       <div className={styles.landing}>
         <h1 className={styles.landing_heading}>Pack Shop Online</h1>
       </div>
+      <h2 className={styles.heading}>Featured Products</h2>
       <Carosel packs={packs} />
       <PacksGrid packs={packs} />
     </div>

@@ -1,0 +1,25 @@
+@use "../../scss/pallete";
+
+$light: #ffffff;
+$light-accent: #a59c9b;
+$main: #9f9896;
+$dark-accent: #83807e;
+$dark-shade: #35323d;
+
+.nav {
+  display: flex;
+  background-color: #9f9896;
+}
+
+.navItem {
+  list-style-type: none;
+  font-size: 2em;
+  text-decoration: none;
+
+  &_link {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #35323d;
+  }
+}

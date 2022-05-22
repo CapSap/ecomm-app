@@ -10,15 +10,16 @@
 .card {
   display: flex;
   flex-direction: column;
-  // width: 1000px;
   height: 60vh;
   position: absolute;
-
+  visibility: hidden;
   opacity: 0;
   transition-duration: 1s ease;
 
   &_active {
     @extend .card;
+    visibility: visible;
+
     opacity: 1;
     transition-duration: 1s;
     transform: scale(1.08);
@@ -70,17 +71,15 @@
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: white;
   font-size: 24px;
-  font-family: Georgia, serif;
   text-decoration: none;
   vertical-align: middle;
-
-  &:hover {
-    border-top-color: #28597a;
-    background: #28597a;
-    color: #ccc;
-  }
-  &:active {
-    border-top-color: #1b435e;
-    background: #1b435e;
-  }
+}
+.btn:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+}
+.btn:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
 }

@@ -29,7 +29,7 @@ const Carosel = ({ packs }) => {
         >
           <img src={pack.imgUrl} alt={pack.packName} />
           <Link className={styles.btn} to={`/products/${pack.id}`}>
-            Click to see more details{" "}
+            Click to learn more{" "}
           </Link>
         </div>
       ))}

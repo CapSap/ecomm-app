@@ -1,5 +1,80 @@
+@use "../../scss/pallete";
+
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-size: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: pallete.$light;
+}
+
+.secondary {
+  color: pallete.$main;
+}
+
+.list {
+  width: 500px;
+  border: 1px solid blanchedalmond;
+  & li {
+    text-align: center;
+    text-justify: inter-word;
+  }
+  & select {
+    font-size: 1em;
+  }
+}
+
+.btn {
+  text-align: center;
+  border-top: 1px solid pallete.$light-accent;
+  background: pallete.$main;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(pallete.$main),
+    to(pallete.$light-accent)
+  );
+  background: -webkit-linear-gradient(
+    top,
+    pallete.$main,
+    pallete.$light-accent
+  );
+  background: -moz-linear-gradient(top, pallete.$main, pallete.$light-accent);
+  background: -ms-linear-gradient(top, pallete.$main, pallete.$light-accent);
+  background: -o-linear-gradient(top, pallete.$main, pallete.$light-accent);
+  padding: 9.5px 19px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: pallete.$light;
+  font-size: 24px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.btn:hover {
+  border-top-color: pallete.$dark-shade;
+  background: pallete.$dark-accent;
+  color: #ccc;
+}
+.btn:active {
+  border-top-color: pallete.$dark-shade;
+  background: pallete.$dark-accent;
+}
+
+p {
+  max-width: 80%;
+  line-height: 1.6;
 }

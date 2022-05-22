@@ -43,21 +43,31 @@ const ProductPage = ({ packs }) => {
         <h2>
           {pack.brand} {pack.packName}
         </h2>
-        <div>
-          <img src={pack.imgUrl} alt={pack.packName} />
-          <form onSubmit={handleClick}>
-            <ul>
-              <li>
-                Price: {pack.price} {pack.priceCurrency}
-              </li>
 
-              <li>Colour: {renderArrayOrSingle(pack.colour)}</li>
-              <li>Size: {pack.size}</li>
-            </ul>
-            <button>Add to Cart</button>
-          </form>
-          <p>{pack.description}</p>
-        </div>
+        <img src={pack.imgUrl} alt={pack.packName} />
+        <form onSubmit={handleClick} className={styles.form}>
+          <h3 className={styles.h3}>Features</h3>
+          <ul className={styles.list}>
+            <li>
+              <span className={styles.secondary}>Colour:</span>{" "}
+              {renderArrayOrSingle(pack.colour)}
+            </li>
+            <li>
+              <span className={styles.secondary}>Size:</span> {pack.size}L
+            </li>
+            <li>
+              <span className={styles.secondary}>Quanity Available:</span>{" "}
+              {pack.quantity}
+            </li>
+            <li>
+              <span className={styles.secondary}>Price:</span> {pack.price}{" "}
+              {pack.priceCurrency}
+            </li>
+          </ul>
+          <button className={styles.btn}>Add to Cart</button>
+        </form>
+        <h3 className={styles.h3}>More Details</h3>
+        <p>{pack.description}</p>
       </div>
     </>
   );

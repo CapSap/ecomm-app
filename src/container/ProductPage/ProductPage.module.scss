@@ -1,4 +1,5 @@
 @use "../../scss/pallete";
+@use "../../scss/font";
 
 .container {
   display: flex;
@@ -7,6 +8,7 @@
   font-size: 2em;
   flex-direction: column;
   align-items: center;
+  font-family: font.$para;
 }
 
 .imgMain {
@@ -101,4 +103,9 @@
 p {
   max-width: 80%;
   line-height: 1.6;
+}
+
+h2,
+h3 {
+  font-family: font.$sub-title;
 }

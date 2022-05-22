@@ -1,4 +1,5 @@
 @use "../../scss/pallete";
+@use "../../scss/font";
 
 .container {
   display: flex;
@@ -14,6 +15,7 @@
 }
 
 .pack {
+  font-family: font.$para;
   text-align: center;
   text-decoration: none;
   color: black;

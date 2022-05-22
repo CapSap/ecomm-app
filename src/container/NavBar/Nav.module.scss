@@ -1,14 +1,8 @@
 @use "../../scss/pallete";
 
-$light: #ffffff;
-$light-accent: #a59c9b;
-$main: #9f9896;
-$dark-accent: #83807e;
-$dark-shade: #35323d;
-
 .nav {
   display: flex;
-  background-color: #9f9896;
+  background-color: pallete.$main;
 }
 
 .navItem {
@@ -20,6 +14,6 @@ $dark-shade: #35323d;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    color: #35323d;
+    color: pallete.$dark-shade;
   }
 }

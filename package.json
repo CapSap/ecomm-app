@@ -9,7 +9,7 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "heroku-prebuild": "npm install -g serve",
-    "start": "serve -s build"
+    "start": "serve -s dist"
   },
   "keywords": [],
   "author": "",

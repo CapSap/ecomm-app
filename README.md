@@ -31,7 +31,7 @@ The site has been deployed to herkou: https://packshoponline.herokuapp.com/
   - maybe have a detailed product page
 
 ## How it works
-The App consists of 2 pages, a home page and a product detailed page. When the app is rendered a useEffect hook is called once to get the data from the database. This data lives in the App state and is passed as props to relevant components.  
+The App consists of 2 pages, a home page and a product detailed page. When the app is rendered a useEffect hook is called once to get the data from the database. This database-data lives in the App state and is passed as props to relevant components. React Router is used to simulate 2 pages.  
 
 ## Thoughts
 

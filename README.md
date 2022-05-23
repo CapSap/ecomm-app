@@ -30,6 +30,11 @@ The site has been deployed to herkou: https://packshoponline.herokuapp.com/
     - Make sure your site is scoped to one category of products.
   - maybe have a detailed product page
 
+## Thoughts
+It was a little tricky to decided on the structure of the data in the database. The MVP requires variants for products and in the end I've opted for a very simple colour variance. In real life these varineces would cause different data to be reflected to the user. 
+
+
+
 
 ## Screenshot
 https://raw.githubusercontent.com/CapSap/ecomm-app/master/Screenshot%202022-05-23%20at%2014-04-46%20Ecomm%20App.png

@@ -36,6 +36,6 @@
     "regenerator": "^0.14.7"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 2 firefox versions"
   ]
 }

@@ -30,8 +30,13 @@ The site has been deployed to herkou: https://packshoponline.herokuapp.com/
     - Make sure your site is scoped to one category of products.
   - maybe have a detailed product page
 
+## How it works
+The App consists of 2 pages, a home page and a product detailed page. When the app is rendered a useEffect hook is called once to get the data from the database. This data lives in the App state and is passed as props to relevant components.  
+
 ## Thoughts
-It was a little tricky to decided on the structure of the data in the database. The MVP requires variants for products and in the end I've opted for a very simple colour variance. In real life these varineces would cause different data to be reflected to the user. 
+
+It was a little tricky to decided on the structure of the data in the database. The MVP requires variants for products and in the end I've opted for a very simple colour variance. In real life these variances would cause different data to be reflected to the user. ie Changing the colour should change the qty avaliable for purchase or price. 
+To improve this I would change the database such that each product varient would also hold price modifier data ( -10, or +10). The price would be calculated by the component based upon a base value as well as what inputs have been selected by the user. 
 
 
 

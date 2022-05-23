@@ -17,11 +17,13 @@ const Admin = () => {
       price: parseFloat(formObj.price),
       quantity: parseFloat(formObj.quantity),
       size: parseFloat(formObj.size),
+      colour: formObj.colour.join(" "),
     };
 
     console.log(formObj);
 
     await createPack(formObj);
+    e.target.reset();
   };
   return (
     <form onSubmit={handleSubmit}>

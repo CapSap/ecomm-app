@@ -68,7 +68,7 @@ const ProductPage = ({ packs }) => {
         </form>
         <div className={styles.description}>
           <h3 className={styles.h3}>More Details</h3>
-          <p>{pack.description}</p>
+          <p className={styles.para}>{pack.description}</p>
         </div>
       </div>
     </>

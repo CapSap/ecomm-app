@@ -42,4 +42,5 @@ To improve this I would change the database such that each product varient would
 
 
 ## Screenshot
-https://raw.githubusercontent.com/CapSap/ecomm-app/master/Screenshot%202022-05-23%20at%2014-04-46%20Ecomm%20App.png
+![alt text]([https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png](https://raw.githubusercontent.com/CapSap/ecomm-app/master/Screenshot%202022-05-23%20at%2014-04-46%20Ecomm%20App.png
+) "App screenshot")

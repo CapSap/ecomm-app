@@ -3,7 +3,6 @@ import styles from "./Home.module.scss";
 import Carosel from "../../components/Carosel/Carosel.jsx";
 
 const Home = ({ packs }) => {
-  console.log(packs);
   return (
     <div className={styles.home}>
       <div className={styles.landing}>

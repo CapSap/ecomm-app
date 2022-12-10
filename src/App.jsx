@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Home from "./container/Home/Home";
-import ProductPage from "./container/ProductPage/ProductPage";
 import { getALlpacks } from "./services/db";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Admin from "./container/Admin/Admin";
-import NavBar from "./container/NavBar/Nav";
+import Home from "./container/Home/Home.jsx";
+import ProductPage from "./container/ProductPage/ProductPage.jsx";
+import Admin from "./container/Admin/Admin.jsx";
+import NavBar from "./container/NavBar/Nav.jsx";
 
 const App = () => {
   const [packs, setPacks] = useState([]);

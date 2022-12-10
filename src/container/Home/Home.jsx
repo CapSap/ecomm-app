@@ -1,6 +1,6 @@
-import Carosel from "../../components/Carosel/Carosel";
-import PacksGrid from "../PacksGrid/PacksGrid";
+import PacksGrid from "../PacksGrid/PacksGrid.jsx";
 import styles from "./Home.module.scss";
+import Carosel from "../../components/Carosel/Carosel.jsx";
 
 const Home = ({ packs }) => {
   console.log(packs);

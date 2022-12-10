@@ -42,7 +42,9 @@ The App consists of 2 pages, a home page and a product detailed page. When the a
 It was a little tricky to decided on the structure of the data in the database. The MVP requires variants for products and in the end I've opted for a very simple colour variance. In real life these variances would cause different data to be reflected to the user. ie Changing the colour should change the qty avaliable for purchase or price. 
 To improve this I would change the database such that each product varient would also hold price modifier data ( -10, or +10). The price would be calculated by the component based upon a base value as well as what inputs have been selected by the user. 
 
-
+### Heroku free tier change
+I didn't know how good I had it!
+I decided to use Railway just to try it out. I was using parcel to bundle the app, but I could not get it to work on railway. I switched to vite and ran into some trouble configuring the .env and connecting to firestore. With the help of the vite docs + stack overflow the problem was diagnosed and the app has been deployed successfully.  
 
 
 ## Screenshot

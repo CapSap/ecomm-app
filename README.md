@@ -4,7 +4,8 @@
 This is a mock ecommerce app that uses Firebase/Firestore as a database, built in React. (no create-react-app used for the fun of it, and assist my understanding of the tools)
 
 ## How to run
-The site has been deployed to herkou: https://packshoponline.herokuapp.com/
+~~The site has been deployed to herkou: https://packshoponline.herokuapp.com/ ~~
+The site has been deployed to railway: https://ecomm-app-production-b205.up.railway.app/
 
 You can also clone this repo but you will need to add your own .env config in order to connect to firebase.
 To develop this project, clone repo, run npm install. Then npm run dev to run a dev server.

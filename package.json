@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "npx http-server ./dist"
+    "start": "npx serve ./src/dist"
   },
   "keywords": [],
   "author": "",
